@@ -1,0 +1,22 @@
+@media (max-width: 700px) {
+  .showcase {
+    height: 400px;
+
+    &-content {
+      text-align: center;
+
+      img {
+        display: none;
+      }
+    }
+    .logo {
+      margin-left: 20px;
+    }
+    .showcase-content {
+      margin-top: 80px;
+    }
+    .btn-primary {
+      margin-top: 50px;
+    }
+  }
+}

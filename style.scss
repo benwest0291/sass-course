@@ -1,6 +1,7 @@
 @import "config";
-@import "utilites";
 @import "button";
+@import "utilites";
+@import "mobile";
 
 * {
   box-sizing: border-box;
@@ -11,7 +12,7 @@
 body {
   background-color: $light-color;
   font-family: $font-stack;
-  list-style: 1.6;
+  line-height: 1.6;
 }
 
 img {
@@ -20,18 +21,12 @@ img {
 
 a {
   text-decoration: none;
-  color: #fff;
 }
 
 .showcase {
-  background-color: $primary-color;
-  border-radius: 100px 0 100px 0;
-  color: #fff;
+  @include set-background($primary-color);
   height: 600px;
-
-  .logo {
-    font-size: 35px;
-  }
+  border-radius: 80px 0 80px 0;
 
   nav {
     display: flex;
@@ -40,36 +35,36 @@ a {
 
     ul {
       display: flex;
-      list-style: none;
+      list-style-type: none;
+    }
 
-      li {
-        padding: 15px;
-        font-size: 20px;
+    li {
+      padding: 15px;
+    }
 
-        a:hover {
-          color: $secondary-color;
-        }
-      }
+    a {
+      color: set-text-color($primary-color);
+    }
+
+    a:hover {
+      color: $secondary-color;
     }
   }
-}
 
-.showcase-content {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  &-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
 
-  img {
-    width: 50%;
-  }
-  h1 {
-    font-size: 50px;
-    line-height: 1.2;
-  }
+    img {
+      width: 50%;
+    }
 
-  p {
-    margin-top: 20px;
-    margin-bottom: 50px;
+    h1 {
+      font-size: 50px;
+      line-height: 1.2;
+    }
   }
 }
